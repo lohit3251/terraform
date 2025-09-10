@@ -1,0 +1,6 @@
+location = "eastus"
+rg_name = "prod_rg"
+vnet_name = "prod_vnet"
+vnet_cidr = "10.0.0.0/16"
+subnet_name = "prod_subnet"
+subnet_prefixes = "10.0.1.0/24"
