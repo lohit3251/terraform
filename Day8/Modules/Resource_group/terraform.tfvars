@@ -1,0 +1,2 @@
+name = "lohitrg"
+location = "canadacentral"
