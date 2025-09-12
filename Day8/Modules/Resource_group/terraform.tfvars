@@ -1,2 +1,0 @@
-name = "lohitrg"
-location = "canadacentral"
