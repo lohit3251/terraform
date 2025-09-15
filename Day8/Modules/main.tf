@@ -10,7 +10,7 @@ module "network" {
 
   source = "git::https://github.com/bkrrajmali/terraform-morning-azure-modules.git//modules/network?ref=prod"
 
-  rg_name  = module.rg1.name
+  rg_name  = var.rg_name
   location = var.location
 
   vnet_name     = var.vnet_name
@@ -26,8 +26,8 @@ module "PIP" {
   count               = var.enabled ? 1 : 0
   enabled=true
   name                = var.pip_name
-  location            = module.rg1.location
-  rg_name = module.rg1.name
+  location            = var.location
+  rg_name = var.rg_name
   
   sku                 = var.sku
   tags                = var.tags
@@ -39,10 +39,10 @@ module "nic" {
   source = "git::https://github.com/bkrrajmali/terraform-morning-azure-modules.git//modules/nic?ref=prod"
 
   name                = var.nic_name
-  location            = module.rg1.location
-  rg_name               = module.rg1.name
-  subnet_id             = module.network.subnet_id
-  public_ip_id          = module.PIP[0].public_ip_id
+  location            = var.location
+  rg_name               = var.rg_name
+  subnet_id             = var.subnet_id
+  public_ip_id          = var.public_ip_id
   private_ip_allocation = "Dynamic"
   tags                  = var.tags
   
@@ -56,7 +56,7 @@ name                = var.vm_name
   location            = var.location
   rg_name = var.rg_name
   size                = var.vm_size
-  nic_ids = [module.nic.id]
+  nic_ids = [module.nic.nic_id]
   tags                = var.tags
 
   admin_username                  = var.admin_username

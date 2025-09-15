@@ -24,7 +24,7 @@ private_ip_allocation = "Dynamic"
  vm_name ="lohitvm"
  vm_size ="Standard_B1s"
  
- admin_username ="admin"
+ admin_username ="azureuser"
  admin_password ="Lohit@123456"
  image ={
     publisher = "Canonical"
