@@ -21,23 +21,23 @@ private_ip_allocation = "Dynamic"
 
 
 
- vm_name ="lohitvm"
- vm_size ="Standard_B1s"
- 
- admin_username ="azureuser"
- admin_password ="Lohit@123456"
- image ={
-    publisher = "Canonical"
-    offer     = "0001-com-ubuntu-server-jammy"
-    sku       = "22_04-lts"
-    version   = "latest"
-  }
- os_disk ={
-      caching              = "ReadWrite"
+vm_name = "lohitvm"
+vm_size = "Standard_B1s"
+
+admin_username = "azureuser"
+admin_password = "Lohit@123456"
+image = {
+  publisher = "Canonical"
+  offer     = "0001-com-ubuntu-server-jammy"
+  sku       = "22_04-lts"
+  version   = "latest"
+}
+os_disk = {
+  caching              = "ReadWrite"
   storage_account_type = "Standard_LRS"
   disk_size_gb         = 30
-  
-  }
+
+}
 
 
 

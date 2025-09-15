@@ -39,9 +39,9 @@ variable "os_disk" {
     storage_account_type = string
     disk_size_gb         = number
   })
-  }
+}
 
- 
+
 
 
 
